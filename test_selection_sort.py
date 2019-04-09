@@ -6,14 +6,6 @@ from selection_sort import selection_sort
 
 
 class TestSelectionSort(unittest.TestCase):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        def f(a, *args, **kwargs):
-            a = np.array(sorted(a, *args, *kwargs))
-
-        selection_sort = f
-
     def test_empty(self):
         a = np.array([])
         b = selection_sort(a)

@@ -6,14 +6,6 @@ from insertion_sort import insertion_sort
 
 
 class TestInsertionSort(unittest.TestCase):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        def f(a, *args, **kwargs):
-            a = np.array(sorted(a, *args, *kwargs))
-
-        insertion_sort = f
-
     def test_empty(self):
         a = np.array([])
         b = insertion_sort(a)
